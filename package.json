@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/perSimone/WASPP/issues"
   },
-  "homepage": "https://github.com/perSimone/WASPP#readme"
+  "homepage": "https://github.com/perSimone/WASPP#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
