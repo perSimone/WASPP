@@ -10,20 +10,22 @@ const autoprefixer = require('autoprefixer');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 
+//styles
+const styleSRC = 'src/scss/**/*.scss'; //* * stands for all the folders in css, *.css stands for all the files that end with .css in these folders
+const styleDIST = 'dist/css/'; //* * stands for all the folders in css, *.css stands for all the files that end with .css in these folders
+
 //js plugins
 const concat = require('gulp-concat');
 const terser = require('gulp-terser');
 const sourcemaps = require('gulp-sourcemaps');
 
+//js
 const jsSRC = 'src/js/**/*.js'; //* * stands for all the folders in js, *.js stands for all the files that end with .js in these folders
 const jsDIST = 'dist/js/'; //* * stands for all the folders in js, *.js stands for all the files that end with .js in these folders
 
-const styleSRC = 'src/scss/**/*.scss'; //* * stands for all the folders in css, *.css stands for all the files that end with .css in these folders
-const styleDIST = 'dist/css/'; //* * stands for all the folders in css, *.css stands for all the files that end with .css in these folders
+const browserSync = require('browser-sync').create();
 
-const browserSync = require("browser-sync").create();
-
-function styleTask() {
+function style() {
     return src(styleSRC) // takes the source
         .pipe(sass({
             errorLogToConsole: true,
@@ -39,7 +41,7 @@ function styleTask() {
         .pipe(browserSync.stream());
 }
 
-function jsTask() {
+function js() {
     return src(jsSRC) // takes the source
         .on('error', console.error.bind(console))
         .pipe(sourcemaps.init()) // initiates the sourcemap
@@ -47,32 +49,32 @@ function jsTask() {
         .pipe(terser()) // minifies the js
         .pipe(sourcemaps.write('.')) // wrote the sourcemap in the same folder
         .pipe(dest(jsDIST)) // outputs the new files there
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 }
 
-function imgTask() {
+function img() {
     return src('./src/images/*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/images'));
 }
 
-function watchTask() {
+function watch() {
     browserSync.init({
         server: {
             baseDir: "./",
             index: "./index.html"
         }
     });
-    gulp.watch(styleSRC, styleTask);
+    gulp.watch(styleSRC, style);
     gulp.watch('./*.html').on('change', browserSync.reload);
-    //gulp.watch(jsSRC).on('change', browserSync.reload);
-    gulp.watch(jsSRC, jsTask);
+    gulp.watch(jsSRC).on('change', browserSync.reload);
+    //gulp.watch(jsSRC, js);
 }
 
-exports.imgTask = imgTask;
-exports.styleTask = styleTask;
-exports.jsTask = jsTask;
-exports.watch = watchTask;
+exports.img = img;
+exports.style = style;
+exports.js = js;
+exports.watch = watch;
 
-exports.default = series(parallel(imgTask, styleTask, jsTask), watchTask);
+exports.default = series(parallel(img, style, js), watch);
 
