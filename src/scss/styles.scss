@@ -1,0 +1,10 @@
+@import "base/variables";
+@import "base/buttons";
+
+body {
+    font-family: $text-font;
+
+    h1 {
+        font-family: $header-font;
+    }
+}

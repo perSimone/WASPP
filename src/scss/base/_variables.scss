@@ -1,0 +1,49 @@
+//custom colors
+$custom-color-1: #43463b;
+/*RIPE OLIVE*/
+$custom-color-2: #2d3945;
+/*NAVAL*/
+$custom-color-3: #b0bec1;
+/*SLEEPY BLUE*/
+$custom-color-4: #b77f44;
+/*TASSEL*/
+$custom-color-5: #2f5265;
+/*ENDLESS SEA*/
+$custom-color-6: #a1654d;
+/*CAVERN CLAY*/
+$custom-color-7: #c7bbad;
+/*TOUCH OF SAND*/
+$custom-color-8: #b69a8c;
+/*SANDBANK*/
+$custom-color-9: #7c544a;
+/*CANYON CLAY*/
+
+//color variables
+$primary-color: $custom-color-1;
+$secondary-color: $custom-color-2;
+$primary-bg-color:$custom-color-3;
+$secondary-bg-color: $custom-color-4;
+
+//button variables
+$primary-button-color: $fun-color-one;
+$primary-button-color-hover: lighten($fun-color-one, 10%);
+$secondary-button-color: $fun-color-three;
+$secondary-button-color-hover: lighten($fun-color-three, 10%);
+$text-color-button: $fun-color-two;
+
+//text variables
+$text-font: 'Open Sans',
+sans-serif;
+$header-font: 'Amatic SC',
+cursive;
+$primary-text-color: $custom-color-5;
+$secondary-text-color: $custom-color-6;
+
+//event variables
+$main-color-hover: lighten($primary-color, 20%);
+$main-border-color: $custom-color-9;
+$main-border-radius: 10px;
+
+// dark theme
+//$primary-color-dark:#F2F2F2;
+//$secondary-color-dark: #222C40;
