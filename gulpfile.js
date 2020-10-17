@@ -58,7 +58,7 @@ function img() {
         .pipe(gulp.dest('dist/images'));
 }
 
-function watch() {
+function watchTask() {
     browserSync.init({
         server: {
             baseDir: "./",
@@ -74,7 +74,7 @@ function watch() {
 exports.img = img;
 exports.style = style;
 exports.js = js;
-exports.watch = watch;
+exports.watchTask = watchTask;
 
-exports.default = series(parallel(img, style, js), watch);
+exports.default = series(parallel(img, style, js), watchTask);
 

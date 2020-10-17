@@ -4,24 +4,89 @@
 <head>
     <link rel="stylesheet" href="./dist/css/styles.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="robots" content="noindex, nofollow">
     <link
         href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./dist/images/eekhoorn.svg">
+    <!-- <link rel="manifest" href="manifest.json" /> make it a pwa -->
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
     <title>WASPP 1.0</title>
 </head>
 
-</head>
-
 <body>
-    <div>
-        <h1>Hello WASPP!</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quaerat fugiat nam, quod maxime totam
-            recusandae delectus amet inventore quas! A quos cumque distinctio error obcaecati esse, fugit totam quam!
-        </p>
-    </div>
+
+    <header>
+        <img src="/dist/images/catlogo.png" alt="web app logo cat">
+    </header>
+
+    <nav id="navigation">
+        <div class="nav-button button" id="home-button">
+            <a href="#home-page">
+                <span id="home-icon" class="icon"><i class="fas fa-home"></i></span>
+            </a>
+            <span>Home</span>
+        </div>
+        <div class="nav-button button" id="info-button">
+            <a href="#info-page">
+                <span id="info-icon" class="icon"><i class="fas fa-info"></i></span>
+            </a>
+            <span>Info</span>
+        </div>
+        <div class="nav-button button" id="instagram-button">
+            <a href="#instagram-page">
+                <span id="instagram-icon" class="icon"><i class="fab fa-instagram"></i></span>
+            </a>
+            <span>Instagram</span>
+        </div>
+        <div class="nav-button button" id="contact-button">
+            <a href="#contact-page">
+                <span id="contact-icon" class="icon"><i class="fas fa-paper-plane"></i></span>
+            </a>
+            <span>Contact</span>
+        </div>
+    </nav>
+
+    <article class="main-content">
+        <section class="page" id="home-page">
+            <h2>Home / about me</h2>
+            <img src="/src/images/Dewey.jpg" alt="Dewey is my hero in this app" width="200px">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In consequuntur modi expedita consectetur
+                dolorum perspiciatis, provident sunt ut doloribus rerum sapiente maxime aliquam placeat nulla, vero
+                accusamus voluptates eos laboriosam?</p>
+        </section>
+        <section class="page" id="info-page">
+            <h2>Information</h2>
+            <ul>
+                <li>Name: Dewey</li>
+                <li>Dob: </li>
+                <li>Spiecies: Cat</li>
+                <li>Hobbies: Eating, sleeping and watching tv.</li>
+                <li>Favourite emoji: 😺 because that is me! </li>
+            </ul>
+        </section>
+        <section class="page" id="instagram-page">
+            <h2>Instagram feed</h2>
+        </section>
+        <section class="page" id="contact-page">
+            <h2>Contact</h2>
+            <div class="contact-icons">
+                <a href="mailto:mail@simonepuhl.com" target="_blank">
+                    <span id="email" class="icon"><i class="fa fa-envelope"></i></span>
+                </a>
+                <a href="https://www.instagram.com/fluffball_dewey/" target="_blank">
+                    <span id="instagram" class="icon"><i class="fab fa-instagram"></i></span>
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <span id="facebook" class="icon"><i class="fab fa-facebook"></i></span>
+                </a>
+            </div>
+        </section>
+    </article>
+
+
+    <script src="/dist/js/all.js"></script>
 </body>
 
 </html>
