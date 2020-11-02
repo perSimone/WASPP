@@ -1,2 +1,2 @@
-document.querySelectorAll("#navigation .button").forEach((t=>{t.addEventListener("click",(t=>{document.querySelector("#navigation .button.active").classList.remove("active"),t.currentTarget.classList.add("active")}))}));
+var buttons=document.getElementsByClassName("button");Array.prototype.forEach.call(buttons,(function(t){t.addEventListener("click",(function(e){t.classList.toggle("active")}))}));
 //# sourceMappingURL=all.js.map

@@ -1,14 +1,13 @@
 @import "base/variables";
 @import "base/buttons";
+@import "base/text";
 
 body {
     margin: 0;
     font-family: $text-font;
     background-color: $primary-bg-color;
 
-    h1 {
-        font-family: $header-font;
-    }
+
 
     header {
         background-color: $primary-color;
@@ -17,6 +16,8 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: fixed;
+        width: 100vw;
 
         img {
             width: 65px;
@@ -45,15 +46,27 @@ body {
                 opacity: 1;
                 transform: scale(1);
             }
+
+            .icon {
+                i {
+                    font-size: 10vw;
+                }
+            }
+
+            .icon-title {
+                display: none;
+            }
         }
     }
 
     .main-content {
-        height: calc(100vh - #{$header-height - $tabs-height});
+        height: calc(100vh - #{$header-height + $tabs-height});
         display: grid;
         grid-template-columns: repeat(4, 100vw);
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
+        top: 85px;
+        position: relative;
 
         .page {
             scroll-snap-align: start;
