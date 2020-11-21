@@ -11,9 +11,9 @@ Test case with dummy text and content and the one I can clone from.
 Also this project will teach me:
 
 - how to use Github with VSC
-- make a web app
-- get better ar SCSS
+- make a web app and desktop view
+- get better at SCSS
 - get better at JavaScript
 - make an instagram feed (instafeed.js)
 - use pwa functionality
-- host a page on github
+- host a page on netlify from github
