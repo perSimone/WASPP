@@ -17,3 +17,4 @@ Also this project will teach me:
 - make an instagram feed (instafeed.js)
 - use pwa functionality
 - host a page on netlify from github
+- more about working on different laptops (private and work)
