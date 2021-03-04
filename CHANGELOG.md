@@ -16,5 +16,6 @@
 *  Edit nov *(brewingJavaS)*
 *  Changed readme file on Mac *(Simone Puhl)*
 *  Changed files from MacBook *(Simone Puhl)*
+*  getting instafeed to work and added token *(Simone Puhl)*
 
 
