@@ -1,4 +1,4 @@
-##  (2021-02-23)
+##  (2021-03-04)
 
 [View Release](git@github.com:perSimone/WASPP.git/commits/tag/)
 
@@ -15,5 +15,6 @@
 *  version november first update *(brewingJavaS)*
 *  Edit nov *(brewingJavaS)*
 *  Changed readme file on Mac *(Simone Puhl)*
+*  Changed files from MacBook *(Simone Puhl)*
 
 
