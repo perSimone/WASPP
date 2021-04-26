@@ -36,5 +36,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.4.0",
     "postcss": "^8.1.1"
+  },
+  "dependencies": {
+    "instafeed.js": "2.0.0-rc3"
   }
 }

@@ -94,8 +94,16 @@
             </div>
         </section>
     </article>
-
-
+    <script type="text/javascript" src="dist/js/instafeed.min.js"></script>
+    <script type="text/javascript">
+        var feed = new Instafeed({
+          sortBy: 'most-recent',
+          accessToken: 'IGQVJXRVhfdzVDYzMxb2R1cHVXd1I1b1FCMTdLT0FGbEhFaTE4ZAnJSZAEJXS3ExNGFTNDZA1S2hDaFMtZAVdjUllnaG9sLTk3UlBhZAlpEdVE3LUx6VUdYczNMX1BuYVZAaYjNJbUxzVG1Nbzk5eWxMN1JRQQZDZD'
+          
+        });
+        feed.run();
+    </script> 
+    
     <script src="/dist/js/all.js"></script>
 </body>
 
